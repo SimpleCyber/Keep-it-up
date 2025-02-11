@@ -12,6 +12,39 @@ app.use(express.json());
 
 let sites = [];
 
+
+// Test API endpoint
+app.get("/", (req, res) => {
+
+    const routes = app._router.stack
+      .filter((r) => r.route) // Only consider routes
+      .map((r) => ({
+        method: Object.keys(r.route.methods)[0].toUpperCase(),
+        path: r.route.path,
+      }));
+
+    res.json({
+        message: "Hello from Node.js backend!",
+        Developer: "Satyam Babu",
+        status: "success",
+        message: "Hello from Node.js backend!",
+        timestamp: new Date(),
+        serverInfo: {
+          port: PORT,
+          environment: process.env.NODE_ENV || "development",
+        },
+
+        availableRoutes: routes
+      });
+
+
+
+      
+  
+    res.json({  });
+
+});
+
 // Add immediate URL check
 async function wakeUpUrl(url) {
     try {
