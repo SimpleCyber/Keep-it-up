@@ -9,7 +9,7 @@ const cors = require("cors");
 app.use(cors({
     origin: [
         'http://localhost:3000',
-        'https://keepitup.vercel.app/'
+        'https://keepitup.vercel.app'
     ],
     methods: ['GET', 'POST', 'DELETE', 'PUT']
 }));
