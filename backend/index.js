@@ -5,7 +5,7 @@ const axios = require('axios');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3000,https://keepitup.vercel.app',
+    origin: ['http://localhost:3000', 'https://keepitup.vercel.app'], // Corrected array format
     methods: ['GET', 'POST', 'DELETE', 'PUT']
 }));
 app.use(express.json());
