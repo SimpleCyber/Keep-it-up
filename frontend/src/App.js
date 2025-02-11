@@ -181,6 +181,7 @@ function App() {
       >
         <input
           type="text"
+          id="url"
           value={newUrl}
           onChange={(e) => setNewUrl(e.target.value)}
           placeholder="Enter website URL (e.g., google.com)"
