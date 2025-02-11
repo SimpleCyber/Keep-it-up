@@ -4,16 +4,11 @@ const axios = require('axios');
 
 const app = express();
 
-const cors = require("cors");
-
 app.use(cors({
-    origin: [
-        'http://localhost:3000',
-        'https://keepitup.vercel.app'
-    ],
+    origin: 'http://localhost:3000,https://keepitup.vercel.app',
     methods: ['GET', 'POST', 'DELETE', 'PUT']
 }));
-
+app.use(express.json());
 
 let sites = [];
 
